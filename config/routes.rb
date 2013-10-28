@@ -5,6 +5,7 @@ NonScaffoldedRails::Application.routes.draw do
 
   match 'about_us'   => 'info#about',   :as => :about
   match 'contact_us' => 'info#contact', :as => :contact
+  match 'posts'      => 'posts#index',  :as => :posts
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
