@@ -8,6 +8,17 @@
 </head>
 <body>
 
+<p><%= image_tag 'rails.png' %></p>
+
+<div id="menu">
+	<ul>
+		<li><%= link_to 'Home', root_path %></li>
+		<li><%= link_to 'About', about_path %></li>
+		<li><%= link_to 'Contact', contact_path %></li>
+	</ul>
+</div>
+
+<!-- This is where our views are injected -->
 <%= yield %>
 
 </body>

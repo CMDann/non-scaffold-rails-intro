@@ -3,8 +3,8 @@ NonScaffoldedRails::Application.routes.draw do
   root :to => 'info#index'
   #            ^Controller#Action
 
-  match 'about_company_name'   => 'info#about'   :as => 'about'
-  match 'contact_us'           => 'info#contact' :as => 'contact'
+  match 'about_us'   => 'info#about',   :as => :about
+  match 'contact_us' => 'info#contact', :as => :contact
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
