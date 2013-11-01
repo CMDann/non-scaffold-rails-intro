@@ -1,12 +1,23 @@
 NonScaffoldedRails::Application.routes.draw do
-
+  
   root :to => 'info#index'
-  #            ^Controller#Action
-
-  match 'about_us'   => 'info#about',   :as => :about
-  match 'contact_us' => 'info#contact', :as => :contact
-  match 'posts'      => 'posts#index',  :as => :posts
-
+  # URL / will map to index action of the info controller.
+  
+  match 'about_us' => 'info#about', :as => 'about'
+  # URL /about will map to about action of the info controller.
+  
+  match 'contact_us' => 'info#contact', :as => 'contact'
+  # URL /contact will map to contact action of the info controller.
+  
+  match 'posts' => 'posts#index', :as => 'posts', :via => :get
+  # URL /posts will map to the index action of the posts controller.
+  
+  match 'posts/new' => 'posts#new', :as => 'new_post', :via => :get
+  
+  match 'posts' => 'posts#create', :as => 'create_post', :via => :post
+  # Only execute the create action if we POST to /posts
+  
+  match 'posts/:id' => 'posts#show', :as => 'post', :via => :get
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

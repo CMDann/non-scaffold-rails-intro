@@ -1,19 +1,17 @@
 class InfoController < ApplicationController
-
-  # We create these so it is obvious which views exist.
-  # These are empty - this is here for you.
-
-  # Three routs have been defined for the actions in the config/routes.rb file
-
+  # Although these controller actions are
+  # all empty. We create here such that it is
+  # obvious which views exist.
+  
+  # Three routes have been defined for these
+  # actions in the confin/routes.rb file.
+  
   def index
-  end # Automatically loads the: app/views/index.html.erb
-
+  end # Automatically loads: app/views/info/index.html.erb
+  
   def about
-  end # Automatically loads the: app/views/about.html.erb
-
+  end # loads: app/views/info/about.html.erb
+  
   def contact
-  end # Automatically loads the: app/views/contact.html.erb
-
-
-
+  end # loads: app/views/info/contact.html.erb
 end

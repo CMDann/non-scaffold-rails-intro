@@ -1,13 +1,15 @@
 <h2>Company Blog</h2>
 
-<ul>
-	<% @all_posts.each do | post | %>
-	<h3><%= post.title %></h3>
-	<ul>
-		<li>Created ad: <%= post.created_at %></li>
-		<li>Updated ad: <%= post.updated_at %></li>
-	</ul>
-	<p><%= post.content %></p>
-	<hr />
-	<% end %>
-</ul>
+<!-- Loop through all the posts you get from
+     the controller. Title goes in an h3 tag.
+     The content goes in a p tag. -->
+     
+<% @posts.each do |post| %>
+  <h3><%= link_to post.title, post %></h3>
+  <p><%= post.created_at %></p>
+  <p><%= post.content %></p>
+<% end %>
+
+<p>
+  <%= link_to 'Create New Blog Post', new_post_path %>
+</p>

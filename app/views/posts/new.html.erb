@@ -1,0 +1,16 @@
+<h2>Create a New Post</h2>
+<!-- The f block param is known as a form builder.
+     We use it to build the elements of our form. -->
+<%= form_for @post do |f| %>
+  <div>
+    <%= f.label :title %> <br>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :content %> <br>
+    <%= f.text_area :content %>
+  </div>
+  <div>
+    <%= f.submit 'Submit New Post' %>
+  </div>
+<% end %>
