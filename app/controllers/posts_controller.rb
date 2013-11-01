@@ -33,4 +33,11 @@ class PostsController < ApplicationController
     end
     
   end # Only loads a view on error, otherwise redirects.
+  
+  
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to :action => :index
+  end # This action has no associated view. It always redirects.
 end

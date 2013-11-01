@@ -18,10 +18,8 @@ NonScaffoldedRails::Application.routes.draw do
   # Only execute the create action if we POST to /posts
   
   match 'posts/:id' => 'posts#show', :as => 'post', :via => :get
-
-  match 'posts/:id/edit' => 'posts#edit', :as => 'edit_post', :via => :get
-  match 'posts/:id' => 'posts#update', :as => 'update_post', :via => :put
   
+  match 'posts/:id' => 'posts#destroy', :as => 'delete_post', :via => :delete
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
